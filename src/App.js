@@ -3,6 +3,7 @@ import Statistics from './Components/Statistics/Statistics';
 import FeedbackOptions from './Components/Feedback/FeedbackOptions';
 import Section from './Components/Section/Section';
 import Notification from './Components/Notification/Notification';
+
 export default class App extends Component {
   state = {
     good: 0,
@@ -11,7 +12,7 @@ export default class App extends Component {
   };
 
   onLeaveFeedback = e => {
-    const name = e.target.textContent;
+    const name = e.target.name;
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
