@@ -6,7 +6,9 @@ const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
     <div>
       <ul
         className={s.list}
-        style={{ backgroundColor: positivePercentage >= 50 ? 'green' : 'red' }}
+        style={{
+          backgroundColor: positivePercentage >= 50 ? 'green' : 'red',
+        }}
       >
         <li>Good: {good}</li>
         <li>Neutral: {neutral}</li>
